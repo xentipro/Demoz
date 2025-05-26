@@ -1,0 +1,12 @@
+<?php
+include 'db.php';
+
+$name = $_POST['name'];
+$quantity = $_POST['quantity'];
+$price = $_POST['price'];
+
+$sql = "INSERT INTO snacks (name, quantity, price) VALUES ('$name', $quantity, $price)";
+$conn->query($sql);
+
+header("Location: index.php");
+?>
